@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title> Aguarde... </title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var urlDestino = "https://inlead.digital/bioteston-3zKpxB";
+
+      var usaAtraso = false; // Gabarito: usar true caso queira que considere atraso, false para redirecionar direto
+      var tempoAtraso = 0.5; //Colocar em segundos
+      
+      ms = atrasoSegundos * 1000;
+      usaAtraso == false ? redirect(urlDestino) : redirectAtraso(urlDestino, ms);
+
+      function redirect(urlDestino)
+      {
+        window.location.href = urlDestino;
+      }
+
+      function redirectAtraso(urlDestino, ms)
+      {
+        setTimeout(function() {
+          window.location.href = urlDestino;
+        }, ms);
+      }
+    </script>
+  </body>
+</html>
